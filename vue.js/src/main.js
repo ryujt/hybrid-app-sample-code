@@ -1,0 +1,19 @@
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import ElementPlus from "element-plus";
+import ko from "element-plus/es/locale/lang/ko";
+import errorLog from "@/utils/errorLog";
+
+const app = createApp(App)
+    .use(store)
+    .use(router)
+    .use(ElementPlus, { locale: ko });
+
+app.config.errorHandler = (e) => {
+    console.log("------->", e);
+    errorLog.sendMessage(JSON.stringify(e));
+};
+
+app.mount("#app");
