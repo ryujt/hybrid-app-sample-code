@@ -1,14 +1,11 @@
 # 하이브리드 형식의 프로젝트 샘플 코드
 
 하이브리드 형식의 프로젝트에 대한 샘플코드입니다.
-베리풀 개발을 통해서 얻은 결과물 중에 보편적으로 사용할 수 있는 코드를 분리 및 정리하였습니다.
 
 
 ## Flutter
 
-### 폴더 및 파일 작성 규칙
-
-하이브리드 형식의 프로젝트에 대한 규칙입니다. 최대한 api 호출과 UI 요소는 웹에서 처리하는 것을 원칙으로합니다.
+### 폴더 및 파일 설명
 
 ![](./pic-1.png)
 * api: Rest API 호출
@@ -31,7 +28,7 @@
 
 ## Vue.js
 
-### 폴더 및 파일 작성 규칙
+### 폴더 및 파일 설명
 
 ![](./pic-2.png)
 * api: Rest API 호출
@@ -64,42 +61,4 @@
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
 },
-```
-
-::: warning
-vuex-persistedstate 패키지는 더 이상 사용하지 않습니다.
-영구 저장이 필요한 정보는 모두 app에서 처리하도록합니다.
-:::
-
-
-## Backend
-
-### 에러 로그 API
-
-프론트의 오류 수집을 위한 API 경로는 "/error/loging"로 통일하고 파라메터는 아래 코드를 참고합니다.
-
-``` js
-export default {
-    sendMessage(code, msg) {
-        let memberId = 0;
-        try {
-            memberId = globals.getMemberInfo().id;
-        } catch (e) {
-            console.log(e);
-        }
-
-        const request = {
-            memberId: memberId,
-            module: globals.getCurrentPath(),
-            errorCode: code,
-            errorMsg: msg
-        };
-
-        try {
-            axios.post(process.env.VUE_APP_API_BASEURL + 'error/loging', request);
-        } catch (e) {
-            console.log(e);
-        }
-    }
-}
 ```

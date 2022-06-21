@@ -38,17 +38,6 @@ export default {
     },
 
     /**
-     * 로그인된 사용자 정보를 전송
-     */
-    memberInfo(info) {
-        const msg = {
-            code: "memberInfo",
-            info: info,
-        };
-        this.post(msg);
-    },
-
-    /**
      * 웹앱 초기화면 로딩이 완료된 것을 네이티브에게 알려준다.
      * 네이티브는 이 신호를 받으면 인트로 화면에서 웹뷰 화면으로 전환한다.
      */

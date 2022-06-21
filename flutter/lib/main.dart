@@ -8,7 +8,6 @@ import 'globals.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -21,5 +20,13 @@ class MyApp extends StatelessWidget {
   void _init(BuildContext context) {
     Config().init();
     Globals().init(context);
+
+    Bridge().subscribeEvent((event) async {
+      print("${event.code} - ${jsonEncode(event.params)}");
+      switch (event.code) {
+        case 'webViewReady': // TODO: 스프래시 화면에서 메인화면 전환 등
+        break;
+      }
+    });
   }
 }

@@ -14,9 +14,9 @@ class Globals {
 
   Globals._internal() {
     Bridge().subscribeEvent((event) async {
-      print("${event.code} - ${jsonEncode(event.params)}");
       switch (event.code) {
         case 'webViewReady': _webViewReady(); break;
+        case 'syncGlobals': _syncGlobals(event); break;
       }
     });
   }
@@ -53,6 +53,10 @@ class Globals {
 
   void _webViewReady() {
     Bridge().syncGlobals(jsonEncode(_syncData));
+  }
+
+  void _syncGlobals(EventData event) {
+    _syncData = event.params;
   }
 
   var _prefs;
