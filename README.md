@@ -48,5 +48,5 @@
 
 
 ## 기타
-* [Flutter & Vue Javascript bridge](./etc/011/)
-* [Flutter & Vue 데이터 동기화](./etc/012/)
+* [Flutter & Vue Javascript bridge](./docs/etc/011/)
+* [Flutter & Vue 데이터 동기화](./docs/etc/012/)
