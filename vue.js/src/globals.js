@@ -24,10 +24,18 @@ export default {
         store.dispatch("main/setMemberInfo", syncData.memberInfo);
     },
 
+    getData() {
+        return syncData;
+    },
+
+    update() {
+        bridgeOut.syncGlobals(syncData);
+    },
+
     setMemberInfo(value) {
         syncData.memberInfo = value;
         store.dispatch("main/setMemberInfo", syncData.memberInfo);
-        bridgeOut.syncGlobals(syncData);
+        update();
     },
 
     getCurrentPath() { return currentPath; },

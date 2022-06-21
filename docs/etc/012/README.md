@@ -42,8 +42,6 @@ let syncData = {
     memberInfo: {},
 };
 
-let currentPath = "/";
-
 export default {
     init() {
         window.syncGlobals = this.syncGlobals;
@@ -55,14 +53,19 @@ export default {
         store.dispatch("main/setMemberInfo", syncData.memberInfo);
     },
 
-    setMemberInfo(value) {
-        syncData.memberInfo = value;
-        store.dispatch("main/setMemberInfo", syncData.memberInfo);
+    getData() {
+        return syncData;
+    },
+
+    update() {
         bridgeOut.syncGlobals(syncData);
     },
 
-    getCurrentPath() { return currentPath; },
-    setCurrentPath(value) { currentPath = value },
+    setMemberInfo(value) {
+        syncData.memberInfo = value;
+        store.dispatch("main/setMemberInfo", syncData.memberInfo);
+        update();
+    },
 }
 ```
 
