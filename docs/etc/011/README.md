@@ -3,9 +3,6 @@
 Flutter와 Vue를 이용해서 하이브리드 앱을 개발할 때
 Javascript bridge를 이용해서 메시지를 주고 받는 과정을 설명합니다.
 
-> 샘플 코드는 아래의 저장소를 참고하시기 바랍니다.
-> * [https://github.com/ryujt/hybrid-app-sample-code](https://github.com/ryujt/hybrid-app-sample-code)
-
 
 ## Vue 파트
 
