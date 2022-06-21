@@ -3,9 +3,9 @@
 하이브리드 형식의 프로젝트에 대한 샘플코드입니다.
 
 
-## Flutter
+## 폴더 및 파일 설명
 
-### 폴더 및 파일 설명
+### Flutter
 
 ![](./pic-1.png)
 * api: Rest API 호출
@@ -26,9 +26,7 @@
 * messages.dart: 에러 등의 메시지를 코드로 관리합니다.
 
 
-## Vue.js
-
-### 폴더 및 파일 설명
+### Vue.js
 
 ![](./pic-2.png)
 * api: Rest API 호출
@@ -48,17 +46,7 @@
 * VueBase.js: 모든 뷰에 공통적으로 필요한 속성 및 기능을 정의하여 mixin 형태로 공유합니다.
 * .env.*: 서버 주소 등 설정 파일 (개발환경에 따라서 분리된 설정값을 제공)
 
-### 기본 패키지
 
-``` json
-"dependencies": {
-    "axios": "^0.27.2",
-    "core-js": "^3.8.3",
-    "element-plus": "^2.2.6",
-    "mitt": "^3.0.0",
-    "swiper": "^8.2.4",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
-},
-```
+## 기타
+* [Flutter & Vue Javascript bridge](/etc/011/)
+* [Flutter & Vue 데이터 동기화](/etc/012/)
