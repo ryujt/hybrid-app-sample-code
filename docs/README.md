@@ -48,6 +48,6 @@
 
 
 ## 기타
-* [Flutter & Vue Javascript bridge](/docs/etc/011/)
-* [Flutter & Vue 데이터 동기화](/docs/etc/012/)
-* [Event Bus를 활용한 UI와 기능 분리](/docs/etc/013/)
+* [Flutter & Vue Javascript bridge](./etc/011/)
+* [Flutter & Vue 데이터 동기화](./etc/012/)
+* [Event Bus를 활용한 UI와 기능 분리](./etc/013/)
