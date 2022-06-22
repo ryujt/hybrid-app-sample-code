@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sample/config.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'core/bridge.dart';
@@ -18,7 +17,6 @@ class MyApp extends StatelessWidget {
   }
 
   void _init(BuildContext context) {
-    Config().init();
     Globals().init(context);
 
     Bridge().subscribeEvent((event) async {
